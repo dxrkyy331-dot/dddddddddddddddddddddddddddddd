@@ -10,7 +10,7 @@ already gives you. There is no ESP, no tracking through walls and no combat auto
    Create a new repository and upload all files from this folder, including the hidden `.github` folder.
    If your system hides it, use Add file > Create new file on GitHub, type `.github/workflows/build.yml` as the name and paste the contents of that file.
 2. Open the **Actions** tab. The `build` workflow starts by itself after the upload.
-3. When it turns green, open **Releases** on the right side of the repository page and download `target-hud-1.3.0.jar` from "Latest build".
+3. When it turns green, open **Releases** on the right side of the repository page and download `target-hud-1.4.0.jar` from "Latest build".
    (You can also use the run's Artifacts, but that is a zip that contains the jar.)
 
 ## Settings
@@ -18,6 +18,7 @@ already gives you. There is no ESP, no tracking through walls and no combat auto
 Press **Right Shift** in game to open the module panels (you can change the key under Options > Controls).
 
 - **Left click** a row to switch it on or off.
+- **Right click** a row with an arrow to open its slider (Fog strength, number of Crystals).
 - **Drag** a panel by its title to move it.
 
 | Panel | Module | What it does |
@@ -25,13 +26,17 @@ Press **Right Shift** in game to open the module panels (you can change the key 
 | HUD | Target HUD | Card with name, distance, health and armor of what you look at |
 | HUD | Coordinates | Your XYZ in the top left corner |
 | HUD | Facing | The direction you look (north, south, east, west) |
+| Effects | Fog | Soft light fog at the screen edges. Slider: strength 0 to 100% |
+| Effects | Crystals | Twinkling white squares over the whole screen. Slider: 0 to 30 |
+
+Fog and Crystals are off by default. Switch them on, then right click the row to move the slider.
 
 Your choices are saved in `config/targethud.properties`.
 
 ## Install
 
 1. Install Fabric Loader for Minecraft 1.21.4 and put Fabric API in your `mods` folder.
-2. Put `target-hud-1.3.0.jar` in the same `mods` folder.
+2. Put `target-hud-1.4.0.jar` in the same `mods` folder.
 3. Check the rules of any server you join. Most allow client-side HUD mods, but some do not.
 
 ## Other Minecraft versions

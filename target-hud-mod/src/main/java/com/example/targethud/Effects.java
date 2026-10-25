@@ -28,7 +28,7 @@ public final class Effects {
         ctx.fill(0, 0, w, h, (haze << 24) | 0xC8D2FF);
     }
 
-    /** Draws {@code count} twinkling white squares inside the given area. */
+    /** Draws {@code count} twinkling white squares spread over the given area. */
     public static void crystals(DrawContext ctx, int x, int y, int w, int h, int count) {
         long now = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {

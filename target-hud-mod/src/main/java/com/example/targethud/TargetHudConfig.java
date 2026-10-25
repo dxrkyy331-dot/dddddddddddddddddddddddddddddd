@@ -12,13 +12,16 @@ import java.util.Properties;
 
 /** All features of the GUI and their saved values. */
 public final class TargetHudConfig {
-    public static final String[] PANELS = {"HUD"};
+    public static final String[] PANELS = {"HUD", "Effects"};
 
     public static final Feature TARGET = new Feature("Target HUD", "HUD", true);
     public static final Feature COORDS = new Feature("Coordinates", "HUD", false);
     public static final Feature FACING = new Feature("Facing", "HUD", false);
 
-    public static final List<Feature> ALL = List.of(TARGET, COORDS, FACING);
+    public static final Feature FOG = new Feature("Fog", "Effects", false, 0, 100, 30, true, "%");
+    public static final Feature CRYSTALS = new Feature("Crystals", "Effects", false, 0, 30, 9, true, "");
+
+    public static final List<Feature> ALL = List.of(TARGET, COORDS, FACING, FOG, CRYSTALS);
 
     private static Path file() {
         return FabricLoader.getInstance().getConfigDir().resolve("targethud.properties");

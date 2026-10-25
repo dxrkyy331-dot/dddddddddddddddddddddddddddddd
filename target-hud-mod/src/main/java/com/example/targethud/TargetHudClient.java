@@ -53,6 +53,13 @@ public class TargetHudClient implements ClientModInitializer {
         MinecraftClient mc = MinecraftClient.getInstance();
         if (mc.player == null || mc.options.hudHidden) return;
 
+        int sw = ctx.getScaledWindowWidth(), sh = ctx.getScaledWindowHeight();
+        if (TargetHudConfig.FOG.on) {
+            Effects.fog(ctx, sw, sh, TargetHudConfig.FOG.value / 100.0);
+        }
+        if (TargetHudConfig.CRYSTALS.on) {
+            Effects.crystals(ctx, 0, 0, sw, sh, (int) Math.round(TargetHudConfig.CRYSTALS.value));
+        }
         drawInfo(ctx, mc);
 
         if (!TargetHudConfig.TARGET.on) {
